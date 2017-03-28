@@ -59,7 +59,7 @@ defmodule Slackex do
   end
 
   def request(_endpoint, %{token: _}, _method) do
-    raise :unsupported_method
+    raise ArgumentError, message: "Inavlid method"
   end
 
   def request(endpoint, body, method) do
